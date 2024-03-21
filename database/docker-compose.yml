@@ -2,7 +2,7 @@ version : "3.8"
 
 services:
   databaseimg :
-    build : /root/Doc_Three_Tier/Frontend
+    build : /root/Doc_Three_Tier/database
     container_name: mysql
     ports:
     - "3306:3306"
