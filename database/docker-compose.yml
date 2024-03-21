@@ -1,9 +1,0 @@
-version : "3.8"
-
-services:
-  databaseimg :
-    build : /root/studentapp-3tier-docker-image/database
-    container_name: mysql
-    ports:
-    - "3306:3306"
-    network_mode: bridge
