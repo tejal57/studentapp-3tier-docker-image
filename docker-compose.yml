@@ -2,14 +2,14 @@ version : "3.8"
 
 services:
   frontendimg :
-    build : /root/Doc_Three_Tier/frontend
+    build : /root/studentapp-3tier-docker-image/frontend
     container_name: frontend
     ports:
     - "80:80"
     network_mode: bridge
 
   backendimg :
-   build : /root/Doc_Three_Tier/backend
+   build : /root/studentapp-3tier-docker-image/backend
    container_name: backend
    ports:
    - "8080:8080"
