@@ -9,7 +9,7 @@ RUN yum install java -y
 WORKDIR /opt/apache-tomcat-8.5.99
 COPY student.war  webapps/student.war
 COPY context.xml conf/context.xml
-COPY mysql-connector.jar lib/mysql-connector.jar
+ADD mysql-connector.jar lib/mysql-connector.jar
 
 EXPOSE 8080
 
