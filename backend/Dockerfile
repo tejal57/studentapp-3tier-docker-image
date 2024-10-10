@@ -3,7 +3,7 @@ FROM centos:7
 LABEL APP="Studentapp"
 USER root
 WORKDIR /opt/
-ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96-fulldocs.tar.gz.sha512 .
+RUN curl -O https://downloads.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz
 RUN tar -xzvf apache-tomcat-9.0.96.tar.gz 
 RUN yum install java -y
 WORKDIR /opt/apache-tomcat-9.0.96
