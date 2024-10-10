@@ -5,7 +5,8 @@ USER root
 WORKDIR /opt/
 RUN curl -O https://downloads.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz
 RUN tar -xzvf apache-tomcat-9.0.96.tar.gz 
-RUN yum install default-jdk -y
+RUN yum update -y && \
+    yum install -y curl java-1.8.0-openjdk-devel
 WORKDIR /opt/apache-tomcat-9.0.96
 COPY student.war  webapps/student.war
 COPY context.xml conf/context.xml
