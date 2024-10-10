@@ -3,7 +3,7 @@ FROM centos:7
 LABEL APP="Studentapp"
 USER root
 WORKDIR /opt/
-ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.99/bin/apache-tomcat-8.5.99.tar.gz .
+ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96-fulldocs.tar.gz.sha512
 RUN tar -xzvf apache-tomcat-8.5.99.tar.gz 
 RUN yum install java -y
 WORKDIR /opt/apache-tomcat-8.5.99
