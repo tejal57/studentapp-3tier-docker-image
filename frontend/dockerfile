@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 LABEL APP="StudentappFE"
 
-RUN apt-get update && apt-get install -y apache2
+RUN apt-get update && apt-get install -y apt-utils && apt-get install -y apache2
 COPY index.html /var/www/html/index.html
 
 EXPOSE 80
