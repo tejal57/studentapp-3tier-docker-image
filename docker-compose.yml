@@ -5,7 +5,7 @@ services:
     build: /home/ubuntu/studentapp-3tier-docker-image/frontend
     container_name: frontend
     ports:
-    - "8000:8000"
+    - "9000:80"
     network_mode: bridge
 
   backendimg :
